@@ -45,8 +45,7 @@ $ curl http://localhost:8085/api
 ### Docker Compose
 
 ```bash
-# 1. Замените OWNER в docker-compose.yml на свой GitHub-юзернейм/орг
-# 2. Запустите
+# Запустите
 docker compose up -d
 ```
 
@@ -58,7 +57,7 @@ docker run -d --name ip-api --restart unless-stopped \
   -e TRUSTED_PROXY=192.168.88.49 \
   -e GEO_CACHE_TTL=3600 \
   -e GEO_TIMEOUT=5 \
-  ghcr.io/OWNER/ip-api:latest
+  ghcr.io/tanat74/ip-api:latest
 ```
 
 ### Сборка образа из исходников

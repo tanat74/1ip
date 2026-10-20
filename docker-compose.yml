@@ -1,6 +1,6 @@
 services:
   ip-api:
-    image: ghcr.io/OWNER/ip-api:latest  # replace OWNER with your GitHub username/org
+    image: ghcr.io/tanat74/ip-api:latest
     container_name: ip-api
     restart: unless-stopped
 
