@@ -1,0 +1,16 @@
+services:
+  ip-api:
+    image: ghcr.io/OWNER/ip-api:latest  # replace OWNER with your GitHub username/org
+    container_name: ip-api
+    restart: unless-stopped
+
+    ports:
+      - "8085:8085"
+
+    environment:
+      # Comma-separated list of proxy IPs/networks allowed to set X-Forwarded-For
+      TRUSTED_PROXY: "192.168.88.49"
+      # How long a successful geolocation lookup is cached, in seconds
+      GEO_CACHE_TTL: "3600"
+      # Timeout for the upstream geolocation request, in seconds
+      GEO_TIMEOUT: "5"
