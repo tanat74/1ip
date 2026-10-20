@@ -1,7 +1,7 @@
 services:
-  ip-api:
-    image: ghcr.io/tanat74/ip-api:latest
-    container_name: ip-api
+  "1ip":
+    image: ghcr.io/tanat74/1ip:latest
+    container_name: 1ip
     restart: unless-stopped
 
     ports:

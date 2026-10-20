@@ -1,4 +1,4 @@
-# IP API
+# 1ip
 
 Мини-сервис, который показывает ваш публичный IP-адрес и его геолокацию:
 страна, регион, город, провайдер, организация и ASN.
@@ -52,19 +52,19 @@ docker compose up -d
 ### Docker напрямую
 
 ```bash
-docker run -d --name ip-api --restart unless-stopped \
+docker run -d --name 1ip --restart unless-stopped \
   -p 8085:8085 \
   -e TRUSTED_PROXY=192.168.88.49 \
   -e GEO_CACHE_TTL=3600 \
   -e GEO_TIMEOUT=5 \
-  ghcr.io/tanat74/ip-api:latest
+  ghcr.io/tanat74/1ip:latest
 ```
 
 ### Сборка образа из исходников
 
 ```bash
-docker build -t ip-api .
-docker run -d --name ip-api -p 8085:8085 ip-api
+docker build -t 1ip .
+docker run -d --name 1ip -p 8085:8085 1ip
 ```
 
 ### Без Docker
@@ -102,7 +102,7 @@ location / {
 
 1. **test** — pytest-тесты на Python 3.12
 2. **docker** — сборка образа и публикация в GHCR
-   (`ghcr.io/<owner>/ip-api`) с тегами `latest`, по ветке и по SHA
+   (`ghcr.io/<owner>/1ip`) с тегами `latest`, по ветке и по SHA
 
 Для публикации образа в репозитории нужно включить
 **Settings → Packages → General → Read access for workflows and actions**

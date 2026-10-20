@@ -1,5 +1,5 @@
 [project]
-name = "ip-api"
+name = "1ip"
 version = "1.0.0"
 description = "Shows your public IP address and its geolocation"
 requires-python = ">=3.10"
